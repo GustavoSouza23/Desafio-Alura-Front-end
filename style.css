@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300 ..900&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor-primaria: #0f7767;
+  --cor-secundaria: #ffffff;
+  --cor-terciaria: #be0808;
+  --cor-quaternaria: #2c90d7;
+  --cor-quintaria: #0c8903;
+  --cor-sextaria: #fb8b24;
+  --cor-box-shadow: #000000;
+
+  --font-primaria: "Montserrat", sans-serif;
+  --font-secundaria: "Rubik", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: linear-gradient(var(--cor-primaria), var(--cor-secundaria));
+}
+
+.imagem__logo__superior {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  animation: pulse 0.9s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(1350%);
+  }
+}
+
+.titulo__texto {
+  width: 100%;
+  padding: 0px 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--cor-box-shadow);
+  font-family: var(--font-primaria);
+  font-weight: 600;
+  box-shadow: var(--cor-box-shadow) 0px 5px 15px;
+}
+
+.conteudo {
+  padding: 5% 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.conteudo__principal {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.conteudo__entrada__texto {
+  display: flex;
+  align-items: center;
+  border: solid var(--cor-primaria) 2px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: var(--cor-box-shadow) 0px 5px 15px;
+  margin-top: auto;
+  padding: 10px;
+  outline: none;
+  text-transform: lowercase;
+}
+
+.conteudo__alerta {
+  display: flex;
+  font-size: 0.87rem;
+  width: 100%;
+  align-items: center;
+  font-family: var(--font-primaria);
+  font-weight: 400;
+}
+
+ion-icon {
+  color: var(--cor-sextaria);
+}
+
+.conteudo__saida__texto {
+  display: flex;
+  align-items: center;
+  border: solid var(--cor-primaria) 2px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: var(--cor-box-shadow) 0px 5px 15px;
+  margin-top: auto;
+  padding: 10px;
+  outline: none;
+}
+
+.button__criptografar {
+  background-color: var(--cor-terciaria);
+  width: 120px;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 2px;
+  font-size: 1rem;
+  padding: 7px 0;
+  margin: 5px;
+  color: var(--cor-secundaria);
+  font-family: var(--font-primaria);
+  cursor: pointer;
+}
+
+.button__criptografar:hover {
+  background-color: var(--cor-primaria);
+  transition: 0.5s all;
+}
+
+.button__descriptografar {
+  background-color: var(--cor-quaternaria);
+  width: 120px;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 2px;
+  font-size: 1rem;
+  padding: 7px 0;
+  margin: 5px;
+  color: var(--cor-secundaria);
+  font-family: var(--font-primaria);
+  cursor: pointer;
+}
+
+.button__descriptografar:hover {
+  background-color: var(--cor-primaria);
+  transition: 0.5s all;
+}
+
+.button__copiar__texto {
+  background-color: var(--cor-quintaria);
+  width: 120px;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 1px;
+  font-size: 1rem;
+  height: 30px;
+  padding: 7px o;
+  margin: 5px;
+  color: var(--cor-secundaria);
+  font-family: var(--font-primaria);
+  cursor: pointer;
+}
+
+.button__copiar__texto:hover {
+  background-color: var(--cor-primaria);
+  transition: 0.5s all;
+}
+
+.imagem__logo__inferior {
+  border-radius: 100%;
+  width: 20rem;
+  height: 20rem;
+  animation: pulse 0.9s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(135%);
+  }
+}
+
+.rodape {
+  background: linear-gradient(var(--cor-primaria), var(--cor-secundaria));
+  text-align: center;
+  padding: 20px;
+  font-size: 1.25rem;
+  font-family: var(--font-secundaria);
+  font-weight: 600;
+}
+
+#rodape__logo__github {
+  color: var(--cor-quaternaria);
+  font-size: 1.8rem;
+}
+
+@media (max-width: 1000px) {
+  .conteudo {
+    flex-direction: column;
+
+  }
+
+  .conteudo__principal {
+    width: auto;
+  }
+}
